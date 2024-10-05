@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صانع العبارات AI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Cairo', sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background: linear-gradient(135deg, #673ab7, #E0B1FF);
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .header {
+            margin-top: 40px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.8;
+        }
+
+        .btn {
+            background-color: white;
+            color: #673ab7;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+            margin: 20px 10px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #E0B1FF;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .btn.downloading {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .safety-message {
+            background-color: #FFA500;
+            color: #000;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 10px auto;
+            max-width: 80%;
+            font-weight: bold;
+        }
+
+        .description {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .feature-list {
+            text-align: right;
+            list-style-type: none;
+            padding-right: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .feature-list li::before {
+            font-family: "Font Awesome 5 Free";
+            content: "\f005";
+            font-weight: 900;
+            position: absolute;
+            right: -25px;
+            color: #FFA500;
+        }
+
+        .screenshots {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .screenshots img {
+            width: 200px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .screenshots img:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+            .subtitle {
+                font-size: 1em;
+            }
+            .screenshots img {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header animate__animated animate__fadeInDown">
+            <h1><i class="fas fa-magic"></i> صانع العبارات AI</h1>
+            <p class="subtitle">by abody dev</p>
+        </div>
+        
+        <div class="animate__animated animate__fadeInUp">
+            <button id="downloadBtn" class="btn"><i class="fas fa-download"></i> حمل التطبيق</button>
+            <a href="mailto:smartphraseapp@gmail.com" class="btn"><i class="fas fa-envelope"></i> تواصل معنا</a>
+        </div>
+        
+        <div class="safety-message animate__animated animate__fadeIn animate__delay-1s">
+            <i class="fas fa-shield-alt"></i> هذا التطبيق آمن تمامًا وغير ضار. نحن نهتم بأمان وخصوصية مستخدمينا.
+        </div>
+        
+        <div class="screenshots animate__animated animate__fadeIn animate__delay-2s">
+            <img src="https://firebasestorage.googleapis.com/v0/b/ebarat-8e75b.appspot.com/o/%D9%A2%D9%A0%D9%A2%D9%A4%D9%A1%D9%A0%D9%A0%D9%A3_%D9%A0%D9%A6%D9%A0%D9%A0%D9%A3%D9%A9.jpg?alt=media&token=d47f1d49-7309-4935-bc02-a4a0bddf92c9" alt="تطبيق صانع العبارات 1" class="animate__animated animate__zoomIn">
+            <img src="https://firebasestorage.googleapis.com/v0/b/ebarat-8e75b.appspot.com/o/%D9%A2%D9%A0%D9%A2%D9%A4%D9%A1%D9%A0%D9%A0%D9%A3_%D9%A0%D9%A6%D9%A0%D9%A2%D9%A1%D9%A5.jpg?alt=media&token=f5b30f4e-e094-4f00-94a9-1351deacf020" alt="تطبيق صانع العبارات 2" class="animate__animated animate__zoomIn animate__delay-1s">
+            <img src="https://firebasestorage.googleapis.com/v0/b/ebarat-8e75b.appspot.com/o/%D9%A2%D9%A0%D9%A2%D9%A4%D9%A1%D9%A0%D9%A0%D9%A3_%D9%A0%D9%A6%D9%A0%D9%A3%D9%A0%D9%A5.jpg?alt=media&token=4f4ed67d-0cbe-4a2a-be7c-d83794b355d0" alt="تطبيق صانع العبارات 3" class="animate__animated animate__zoomIn animate__delay-2s">
+        </div>
+        
+        <div class="description animate__animated animate__fadeIn animate__delay-3s">
+            <h2><i class="fas fa-info-circle"></i> وصف التطبيق</h2>
+            <p>"صانع عبارات خرافية بالذكاء الاصطناعي"، يقدم للمستخدمين تجربة فريدة لتوليد وتصفح آلاف العبارات المميزة. يتميز التطبيق بوجود مولد عبارات يعتمد على الذكاء الاصطناعي، حيث يمكن للمستخدمين إنشاء عبارات جديدة ومبتكرة بناءً على رغباتهم.</p>
+            
+            <h3><i class="fas fa-star"></i> الميزات الرئيسية للتطبيق:</h3>
+            <ul class="feature-list">
+                <li>مولد عبارات بالذكاء الاصطناعي: يمكن للمستخدمين إنشاء عبارات فريدة وجديدة بضغطة زر واحدة.</li>
+                <li>تصفح آلاف العبارات: يتيح التطبيق إمكانية تصفح مكتبة ضخمة من العبارات الجاهزة والمتنوعة.</li>
+                <li>حفظ العبارات المفضلة: يمكن للمستخدمين حفظ العبارات المفضلة لديهم للوصول إليها في أي وقت.</li>
+                <li>نشر ونسخ العبارات: يسهل التطبيق على المستخدمين مشاركة العبارات عبر وسائل التواصل الاجتماعي أو نسخها لاستخدامها في التطبيقات الأخرى.</li>
+                <li>العبارات أون لاين: يوفر التطبيق تحديثات مستمرة لقائمة العبارات المتاحة عبر الإنترنت.</li>
+            </ul>
+            
+            <p>يعد هذا التطبيق خيارًا مثاليًا لأي شخص يبحث عن الإلهام أو يرغب في مشاركة عبارات رائعة مع أصدقائه ومتابعيه.</p>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('downloadBtn').addEventListener('click', function() {
+            this.classList.add('downloading');
+            this.innerHTML = '<i class="fas fa-spinner fa-spin"></i> جاري التحميل...';
+            
+            setTimeout(() => {
+                window.location.href = 'https://www.mediafire.com/file/hvez5jf9p4adodq/AI_Quotes.apk/file?dkey=u5bcck4lgvs&r=769';
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
